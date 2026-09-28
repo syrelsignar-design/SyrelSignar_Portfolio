@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syrel Abordo Signar | Creative Website</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #091a0e;
+    color: white;
+}
+header {
+    background: #03150b;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #082214;
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f2f6f3;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+nav button:hover,
+nav button.active {
+    color: #fafefc;
+    border-bottom: 2px solid #097740;
+}
+.page {
+    display: none;
+    min-height: 82vh;
+    padding: 70px 8%;
+    animation: fade 0.4s ease;
+}
+.page.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 35px;
+    color: #097740;
+    margin-bottom: 20px;
+}
+h3 {
+    color: #097740;
+    margin-bottom: 15px;
+}
+p {
+    color: #ffffff;
+    line-height: 1.8;
+    font-size: 17px;
+}
+.highlight {
+    color: #097740;
+}
+.btn {
+    display: inline-block;
+    background: #0e5016;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #04654a;
+    transform: translateY(-3px);
+}
+#home {
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg, #13241b, #05100b, #14291f
+    );
+}
+#home p {
+    max-width: 700px;
+}
+.services-container,
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.card {
+    flex: 1 1 250px;
+    max-width: 350px;
+    background: #11281d;
+    border: 1px solid #112e20;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #097740;
+    box-shadow: 0 10px 25px #021f0d33;
+}
+.card .symbol {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.portfolio-card {
+    background: #09281a;
+    border-radius: 15px;
+    border: 1px solid #294336;
+    overflow: hidden;
+    flex: 1 1 250px;
+    max-width: 350px;
+    transition: 0.3s;
+}
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: #097740;
+}
+.portfolio-image {
+    height: 180px;
+    background: linear-gradient(135deg, #0a3618, #097740);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+.portfolio-info {
+    padding: 25px;
+}
+.about-box {
+    max-width: 850px;
+    padding: 35px;
+    background: #0f2f1c;
+    border: 1px solid #213930;
+    border-radius: 15px;
+}
+.about-box p {
+    margin-bottom: 15px;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contact-info,
+.contact-form {
+    flex: 1 1 280px;
+    max-width: 500px;
+    background: #112a1d;
+    padding: 30px;
+    border: 1px solid #293f35;
+    border-radius: 15px;
+}
+.contact-info p {
+    margin: 15px 0;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #304439;
+    border-radius: 8px;
+    background: #102c20;
+    color: white;
+    font-size: 16px;
+}
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+footer {
+    background: #112722;
+    border-top: 1px solid #1d5b13;
+    text-align: center;
+    padding: 25px;
+}
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav button {
+        font-size: 13px;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .page {
+        padding: 50px 6%;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">NCC CREATIVES</div>
+    <nav>
+        <button class="active"
+        onclick="showPage('home', this)">Home</button>
+        <button onclick="showPage('services', this)">
+        Services</button>
+        <button onclick="showPage('portfolio', this)">
+        Portfolio</button>
+        <button onclick="showPage('about', this)">
+        About</button>
+        <button onclick="showPage('contacts', this)">
+        Contacts</button>
+    </nav>
+</header>
+<section id="home" class="page active">
+    <h1>Welcome to My <span class="highlight">Website</span></h1>
+    <p>
+        Hello! I'm Syrel Abordo Signar, an aspiring Animation and
+        Multimedia Arts student passionate about creativity,
+        digital design, video editing, and technology.
+        Explore my site to see my work, background, and services.
+    </p>
+    <button class="btn" onclick="goTo('portfolio')">
+        View My Work
+    </button>
+</section>
+<section id="services" class="page">
+    <h3>What I Offer</h3>
+    <h2>Services</h2>
+    <p>
+        Helping you map out ideas and turn concepts into clear project plans.
+    </p>
+    <div class="services-container">
+        <div class="card">
+            <div class="symbol">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>
+                Posters, flyers, logos, social media
+                graphics, and creative digital designs.
+            </p>
+        </div>
+        <div class="card">
+            <div class="symbol">🎬</div>
+            <h3>Video Editing</h3>
+            <p>
+                Video editing and engaging video content for projects.
+            </p>
+        </div>
+        <div class="card">
+            <div class="symbol">📸</div>
+            <h3>Photography</h3>
+            <p>
+                Turn your special moments into lasting memories
+            </p>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="page">
+    <h3>My Work</h3>
+    <h2>Portfolio</h2>
+    <p>
+        A collection of creative works and projects
+        related to design and multimedia.
+    </p>
+    <div class="portfolio-container">
+        <div class="portfolio-card">
+            <img src="graphic.jpg" alt="My Image"width="100%" height="auto">
+            <div class="portfolio-info">
+                <h3>Graphic Design</h3>
+                <p>
+                    Creative posters, flyers, and
+                    digital illustrations.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-card">
+           <img src="edit.jpg" alt="My Image"width="100%" height="80%">
+            <div class="portfolio-info">
+                <h3>Video Projects</h3>
+                <p>
+                    Video editing and multimedia
+                    storytelling projects.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-card">
+           <img src="photography.jpg" alt="My Image"width="100%" height="auto">
+            <div class="portfolio-info">
+                <h3>Photography</h3>
+                <p>
+                   Capture your special moments with creative, 
+                   high-quality photography that turns memories into timeless stories.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="page">
+    <h3>Get To Know Me</h3>
+    <h2>About Me</h2>
+    <div class="about-box">
+        <p>
+            My name is Syrel Abordo Signar.
+            I am a Bachelor of Science in Animation
+            and Multimedia Arts student at Universty
+            of Northwestern Mindanao.   
+        </p>
+        <p>
+           I’m passionate about digital design, multimedia, and constantly learning new technologies to sharpen my creative skills.
+        </p>
+        <p>
+           Beyond my studies, I'm actively seeking freelance and creative opportunities to apply my digital skills.
+        </p>
+        <p>
+            My goal is to graduate, become successful
+            in my chosen field, traveling and provide a comfortable
+            life for my family.
+        </p>
+    </div>
+</section>
+<section id="contacts" class="page">
+    <h3>Let's Collaborate</h3>
+    <h2>Reach Out</h2>
+    <p>
+        Have a question, project, or collaboration idea?
+        Feel free to get in touch with me.
+    </p>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>📧 Email: syrel.signar@nmsc.edu.ph</p>
+            <p>📍 Location: P6 Malibangcao, Clarin, Misamis Occidental</p>
+            <p>💬 Facebook: <a href="https://www.facebook.com/syrel.abordo.signar" target="_blank">Message Me</a></p>
+        </div>
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form onsubmit="sendMessage(event)">
+                <input type="text"
+                placeholder="Your Name" required>
+                <input type="email"
+                placeholder="Your Email" required>
+                <textarea
+                placeholder="Your Message"
+                required></textarea>
+                <button type="submit" class="btn">
+                    Submit Message
+                </button>
+            </form>
+            <p id="form-message"></p>
+        </div>
+    </div>
+</section>
+<footer class="site-footer text-center">
+    <p class="footer-line">Syrel Abordo Signar &mdash; University of Northwestern Mindanao &mdash;  P6 Malibangcao, Clarin, Misamis Occidental</p>
+
+    <p class="mb-0">&copy; 2026 Syrel Abordo Signar | All rights reserved.</p>
+<script>
+function showPage(pageId, button) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+    document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    button.classList.add('active');
+    window.scrollTo(0, 0);
+}
+function goTo(pageId) {
+    const buttons = document.querySelectorAll('nav button');
+    buttons.forEach(button => {
+        if (button.textContent.trim().toLowerCase() === pageId) {
+            showPage(pageId, button);
+        }
+    });
+}
+function sendMessage(event) {
+    event.preventDefault();
+    document.getElementById('form-message').textContent =
+        "Thank you for your message!";
+    event.target.reset();
+}
+</script>
+</body>
+</html>
